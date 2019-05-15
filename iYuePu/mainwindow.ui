@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>459</width>
+    <height>333</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="verticalLayoutWidget_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>421</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="ctrLayout">
+     <item>
+      <layout class="QVBoxLayout" name="mjLayout">
+       <item>
+        <widget class="QWidget" name="txtBrdWidget" native="true">
+         <widget class="QWidget" name="horizontalLayoutWidget_2">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>9</y>
+            <width>421</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="txtBrdHLayout">
+           <item>
+            <widget class="QWidget" name="txtWidget" native="true">
+             <widget class="QTextEdit" name="textEdit">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>201</width>
+                <height>111</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="BrdWidget" native="true">
+             <widget class="QWidget" name="verticalLayoutWidget_2">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>191</width>
+                <height>111</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="BrdVLayout">
+               <item>
+                <widget class="QWidget" name="keyboard" native="true"/>
+               </item>
+               <item>
+                <widget class="QWidget" name="instWidget" native="true">
+                 <widget class="QWidget" name="horizontalLayoutWidget_3">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>0</y>
+                    <width>171</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <layout class="QHBoxLayout" name="instHLayout">
+                   <item>
+                    <widget class="QPushButton" name="piano">
+                     <property name="text">
+                      <string>PushButton</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_3">
+                     <property name="text">
+                      <string>PushButton</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="btnWidget" native="true">
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>10</y>
+            <width>411</width>
+            <height>121</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="btnHLayout">
+           <item>
+            <widget class="QSpinBox" name="beat"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="major"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="play">
+             <property name="text">
+              <string>PushButton</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="songMenu"/>
+           </item>
+           <item>
+            <spacer name="rtSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Ignored</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
