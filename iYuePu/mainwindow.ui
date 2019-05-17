@@ -29,7 +29,23 @@
       <height>301</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="ctrWidget">
+    <layout class="QVBoxLayout" name="ctrLayout">
+     <item>
+      <spacer name="mone">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
      <item>
       <widget class="QWidget" name="txtWidget" native="true">
        <widget class="QWidget" name="horizontalLayoutWidget">
@@ -43,11 +59,53 @@
         </property>
         <layout class="QHBoxLayout" name="txtLayout">
          <item>
+          <spacer name="txtLeft">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPlainTextEdit" name="plainTextEdit"/>
+         </item>
+         <item>
+          <spacer name="txtRight">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>
       </widget>
+     </item>
+     <item>
+      <spacer name="mtwo">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
      </item>
      <item>
       <widget class="QWidget" name="kbWidget" native="true">
@@ -57,10 +115,26 @@
           <x>10</x>
           <y>10</y>
           <width>411</width>
-          <height>81</height>
+          <height>53</height>
          </rect>
         </property>
-        <layout class="QVBoxLayout" name="kbLayout">
+        <layout class="QHBoxLayout" name="kbHLayout">
+         <item>
+          <spacer name="kbLeft">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
          <item>
           <widget class="QScrollArea" name="scrollArea">
            <property name="widgetResizable">
@@ -71,8 +145,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>407</width>
-              <height>77</height>
+              <width>319</width>
+              <height>49</height>
              </rect>
             </property>
             <widget class="QWidget" name="horizontalLayoutWidget_2">
@@ -88,6 +162,22 @@
             </widget>
            </widget>
           </widget>
+         </item>
+         <item>
+          <spacer name="kbRight">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Minimum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
          </item>
         </layout>
        </widget>

@@ -19,7 +19,7 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    QList<QList<QPushButton*>*> keys;
+    QList<QPushButton*> keys;
 };
 
 #endif // MAINWINDOW_H
