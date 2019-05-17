@@ -42,11 +42,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //下方按扭区
     ui->btnWidget->setLayout(ui->btnHLayout);
-//    ui->btnHLayout->setStretch(0, 1);
-//    ui->btnHLayout->setStretch(1, 1);
-//    ui->btnHLayout->setStretch(2, 1);
-//    ui->btnHLayout->setStretch(3, 1);
-//    ui->btnHLayout->setStretch(4, 1);
 
 
 
@@ -57,9 +52,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->kbHLayout->setStretch(2, 1);
 
     ui->scrollAreaWidgetContents->setLayout(ui->keyHLayout);
-
-    QHBoxLayout *keyHLayout = ui->keyHLayout;
-
+//    QVBoxLayout *keyLayout = ui->keyLayout;
 
 }
 
