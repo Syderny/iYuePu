@@ -6,177 +6,173 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>459</width>
-    <height>333</height>
+    <width>1000</width>
+    <height>900</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1000</width>
+    <height>900</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="verticalLayoutWidget_3">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>421</width>
-      <height>261</height>
+      <x>9</x>
+      <y>9</y>
+      <width>441</width>
+      <height>301</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="ctrLayout">
+    <layout class="QVBoxLayout" name="ctrWidget">
      <item>
-      <layout class="QVBoxLayout" name="mjLayout">
-       <item>
-        <widget class="QWidget" name="txtBrdWidget" native="true">
-         <widget class="QWidget" name="horizontalLayoutWidget_2">
-          <property name="geometry">
-           <rect>
-            <x>9</x>
-            <y>9</y>
-            <width>421</width>
-            <height>121</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="txtBrdHLayout">
-           <item>
-            <widget class="QWidget" name="txtWidget" native="true">
-             <widget class="QWidget" name="horizontalLayoutWidget_4">
-              <property name="geometry">
-               <rect>
-                <x>30</x>
-                <y>20</y>
-                <width>160</width>
-                <height>80</height>
-               </rect>
-              </property>
-              <layout class="QHBoxLayout" name="txtLayout">
-               <item>
-                <widget class="QTextEdit" name="textEdit"/>
-               </item>
-              </layout>
-             </widget>
+      <widget class="QWidget" name="txtWidget" native="true">
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>421</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="txtLayout">
+         <item>
+          <widget class="QPlainTextEdit" name="plainTextEdit"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="kbWidget" native="true">
+       <widget class="QWidget" name="verticalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>411</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="kbLayout">
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>407</width>
+              <height>77</height>
+             </rect>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget_2">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>0</y>
+               <width>381</width>
+               <height>80</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="keyHLayout"/>
             </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="brdWidget" native="true">
-             <widget class="QWidget" name="verticalLayoutWidget_2">
-              <property name="geometry">
-               <rect>
-                <x>0</x>
-                <y>0</y>
-                <width>191</width>
-                <height>111</height>
-               </rect>
-              </property>
-              <layout class="QVBoxLayout" name="brdVLayout">
-               <item>
-                <widget class="QWidget" name="keyboard" native="true">
-                 <widget class="QWidget" name="gridLayoutWidget">
-                  <property name="geometry">
-                   <rect>
-                    <x>10</x>
-                    <y>0</y>
-                    <width>181</width>
-                    <height>51</height>
-                   </rect>
-                  </property>
-                  <layout class="QGridLayout" name="kbLayout"/>
-                 </widget>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="instWidget" native="true">
-                 <widget class="QWidget" name="horizontalLayoutWidget_3">
-                  <property name="geometry">
-                   <rect>
-                    <x>10</x>
-                    <y>10</y>
-                    <width>171</width>
-                    <height>41</height>
-                   </rect>
-                  </property>
-                  <layout class="QHBoxLayout" name="instHLayout">
-                   <item>
-                    <widget class="QPushButton" name="piano">
-                     <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>0</horstretch>
-                       <verstretch>0</verstretch>
-                      </sizepolicy>
-                     </property>
-                     <property name="text">
-                      <string>PushButton</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QPushButton" name="pushButton_3">
-                     <property name="text">
-                      <string>PushButton</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </widget>
-       </item>
-       <item>
-        <widget class="QWidget" name="btnWidget" native="true">
-         <widget class="QWidget" name="horizontalLayoutWidget">
-          <property name="geometry">
-           <rect>
-            <x>9</x>
-            <y>10</y>
-            <width>411</width>
-            <height>121</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="btnHLayout">
-           <item>
-            <widget class="QSpinBox" name="beat"/>
-           </item>
-           <item>
-            <widget class="QComboBox" name="major"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="play">
-             <property name="text">
-              <string>PushButton</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="songMenu"/>
-           </item>
-           <item>
-            <spacer name="rtSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeType">
-              <enum>QSizePolicy::Ignored</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </widget>
-        </widget>
-       </item>
-      </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="btnWidget" native="true">
+       <widget class="QWidget" name="horizontalLayoutWidget_3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>10</y>
+          <width>381</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="btnHLayout">
+         <item>
+          <spacer name="one">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="beat"/>
+         </item>
+         <item>
+          <spacer name="two">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="play">
+           <property name="text">
+            <string>PushButton</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="three">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="demo"/>
+         </item>
+         <item>
+          <spacer name="four">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
      </item>
     </layout>
    </widget>
