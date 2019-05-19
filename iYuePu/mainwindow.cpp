@@ -27,8 +27,8 @@ MainWindow::MainWindow(QWidget *parent) :
                             "color: #151515;"
                             "margin-top: 8px;"
                             "margin-bottom: 8px;"
-                            "margin-left: 20px;"
-                            "margin-right: 0px;"
+                            "margin-left: 10px;"
+                            "margin-right: 10px;"
                             "font-family: 微软雅黑;"
                             "font-weight: bold;"
                             "font-size: 25px;"
@@ -203,9 +203,9 @@ MainWindow::MainWindow(QWidget *parent) :
     spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     toolbar->addWidget(spacer);
 
-    QAction *half = new QAction("CHROMATIC");
+    QAction *half = new QAction("CHR");
     QAction *halfDelay = new QAction("DOT");
-    QAction *delay = new QAction("EXTENT      ");
+    QAction *delay = new QAction("EXT      ");
 
     toolbar->addAction(half);
     toolbar->addAction(halfDelay);
