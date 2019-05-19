@@ -1,5 +1,15 @@
 <RCC>
     <qresource prefix="/">
         <file>keyboard.png</file>
+        <file>ls.txt</file>
+        <file>soj.txt</file>
+        <file>bg.png</file>
+        <file>pause.png</file>
+        <file>play.png</file>
+        <file>upButton.png</file>
+        <file>downButton.png</file>
+        <file>downArrow.png</file>
+        <file>icon.rc</file>
+        <file>logo.ico</file>
     </qresource>
 </RCC>

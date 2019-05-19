@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "mytextedit.h"
 #include <QMainWindow>
 #include <QPushButton>
 #include <QLabel>
@@ -21,7 +22,7 @@ public:
 private:
     Ui::MainWindow *ui;
 
-    QList<QPushButton*> keys;
+    MyTextEdit *textEdit;
 };
 
 #endif // MAINWINDOW_H

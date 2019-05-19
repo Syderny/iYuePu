@@ -7,6 +7,7 @@
 QT       += core gui
 QT += multimedia
 QT += multimediawidgets
+RC_FILE += icon.rc
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -47,3 +48,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     pic.qrc
+
+DISTFILES +=

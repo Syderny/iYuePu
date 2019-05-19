@@ -11,6 +11,7 @@ public:
     explicit MyTextEdit(QWidget *parent = nullptr);
 
 signals:
+    void sendScale(QString scale);
 
 public slots:
     void printScale(QPoint point);
