@@ -6,6 +6,7 @@
 #include <QMediaPlaylist>
 #include <QTimer>
 #include <QFileDialog>
+#include <QThread>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -28,28 +29,28 @@ MainWindow::MainWindow(QWidget *parent) :
                             "margin-bottom: 8px;"
                             "margin-left: 20px;"
                             "margin-right: 0px;"
-                            "font-family: Tw Cen MT;"
+                            "font-family: 微软雅黑;"
                             "font-weight: bold;"
-                            "font-size: 30px;"
+                            "font-size: 25px;"
                         "}"
 
                         "QTextEdit{"
                             "color: #151515;"
-                            "font-family: Tw Cen MT;"
+                            "font-family: 微软雅黑;"
                             "font-weight: bold;"
                             "font-size: 35px;"
                         "}"
 
                         "QSpinBox#beat{"
                             "color: white;"
-                            "font-family: Tw Cen MT;"
+                            "font-family: 微软雅黑;"
                             "font-weight: bold;"
-                            "font-size: 40px;"
+                            "font-size: 32px;"
                         "}"
 
                         "QComboBox#demo{"
                             "color: white;"
-                            "font-family: Tw Cen MT;"
+                            "font-family: 微软雅黑;"
                             "font-weight: bold;"
                             "font-size: 28px;"
                         "}"
@@ -198,6 +199,27 @@ MainWindow::MainWindow(QWidget *parent) :
         textEdit->clear();
     });
 
+    QWidget *spacer = new QWidget;
+    spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    toolbar->addWidget(spacer);
+
+    QAction *half = new QAction("CHROMATIC");
+    QAction *halfDelay = new QAction("DOT");
+    QAction *delay = new QAction("EXTENT      ");
+
+    toolbar->addAction(half);
+    toolbar->addAction(halfDelay);
+    toolbar->addAction(delay);
+
+    connect(half, &QAction::triggered, [=]()mutable{
+        textEdit->setText(textEdit->toPlainText() + "_");
+    });
+    connect(halfDelay, &QAction::triggered, [=]()mutable{
+        textEdit->setText(textEdit->toPlainText().left(textEdit->toPlainText().size()-1) + "· ");
+    });
+    connect(delay, &QAction::triggered, [=]()mutable{
+        textEdit->setText(textEdit->toPlainText() + " - ");
+    });
 
 
     //下方按扭区
@@ -270,14 +292,20 @@ MainWindow::MainWindow(QWidget *parent) :
             QString *txt = new QString;
             *txt = textEdit->toPlainText();
             stream->setString(txt);
-            timer->start(60000 / ui->beat->value());
+            timer->start(60000 / (ui->beat->value() * 2));
+            i = 0;
             ui->play->setIcon(QIcon(":/pause.png"));
         }else {
             timer->stop();
             ui->play->setIcon(QIcon(":/play.png"));
         }
     });
+
     connect(timer, &QTimer::timeout, [=]()mutable{
+        i++;
+        if(i % 2 == 0){
+            return;
+        }
         *stream >> beat;
 
         if(stream->status() == QTextStream::ReadPastEnd){
@@ -291,12 +319,29 @@ MainWindow::MainWindow(QWidget *parent) :
 
             QString runPath = QCoreApplication::applicationDirPath();
 
+            int half = 0;
+            if(beat.indexOf("·") > 0){
+                half = 1;
+            }else if(beat.indexOf("_") >= 0){
+                i--;
+            }
+            beat.replace("·", "");
+            beat.replace("_", "");
+
             playlist->addMedia(QUrl::fromLocalFile(runPath + "/Piano/" +
                                                    beat + ".mp3"));
 
             music->setPlaylist(playlist);
             music->play();
+
+            if(half){
+                timer->stop();
+                QThread::msleep(60000 / (ui->beat->value() * 2));
+                timer->start(60000 / (ui->beat->value() * 2));
+            }
+
         }
+//        qDebug() << i;
     });
 
 
