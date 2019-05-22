@@ -4,13 +4,42 @@ By :Yin_Rui Su_Yongye Zhang_Chuming Yang_Ju Peng_Jiongwen
 This is a project designed for composing music with your numbered music notation.  
 Click [Here](#001) to a Chinese Version.   
 
-## Project Name:  
-i MusicNote  
-### How This Works？
-This is a program mainly programmed in C++ and using Qt 5 as UI.  
-### What Can I do on this application?
-You can input your simplified Music notation according to the international standard of music notation.  
-Click "Play" ,and the rest is for us.  
+### project name:
+iYuePu.
+### Project Description:
+
+> "Enter the notation, tap Play, and leave the rest to us."
+
+This project is to serve people who don't have instruments or play instruments. All you need is a piece of music and a computer with a sound. Just enter any score you want to enter, run the program, and you can play it with your computer. This wonderful and beautiful melody. Music scores contain tones, basic notes, and extensions, lift notes, and more.
+#### Example:
+Enter:
+_A4 _B4 C5· _B4 C5 E5 B4 - -
+_E4 _E4 A4· _G4 A4 C5 G4 - -
+E4 F4· _E4 _F4 C5· E4 -
+_C5 _C5 _C5 B4· _F4# F4# B4 B4 - -
+
+A0 and B0 represent the two rightmost white keys on the piano keyboard, which are also the lowest sounds of La and Ti. The sound is higher than the ones: A1, B1, A2, B2, and so on. F4# and other keys with # are black keys in the piano.
+The underline indicates that the tone is a semitone, the postpoint indicates that the tone is extended by half, and the delay line "-" indicates the time value of the tone. The longer the delay line, the longer the note playback time.
+
+#### How to operate
+You can use the mouse or keyboard to complete the input of the entire score.
+##### Mouse operation
+Open the interface, the piano 88 keys will be presented in front of you. With just a click of the mouse, the music will fly out of the computer between your fingers. You need to “pause”, “lift half-shoot” and so on, just click on the upper right. Corner button.
+##### Keyboard operation
+Entering the score you create directly is as easy as creating on the piano!
+
+Project realization process:
+1. Audio interception, stored as a number of vowels: the instrument is initially set to piano, guitar, harmonica, and input scores.
+2, audio debugging test pitch, unified audio format for synthesis processing.
+3. Project interface design:
+Please check the [项目简介.doc] file.
+4. Analysis of the input part of the score: The score of the input part is processed by the character string. By processing the input score, the specified unit audio is extracted to the file, and then played according to the set number of beats per minute, which can satisfy some users. The need for double speed playback.
+
+Division of labor:
+A (initiator):
+Coordinate the overall work, process and test the audio and source code, and design the beautification project interface.
+B: Mainly responsible for collecting audio production vowels. It is estimated that 60 vowel files need to be processed and tested, and the workload is large.
+C, D, E: Mainly responsible for processing the input score data according to the preset file format at the time of B collection and simulating the extraction of the corresponding audio file to assist B to complete the audio collection test. After the collection is completed, debug the play track and design the beautification project graphical interface. 
 
 -------
 
