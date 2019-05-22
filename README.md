@@ -1,6 +1,5 @@
 # iYuePu
 # CppProjectX
-By :Yin_Rui Su_Yongye Zhang_Chuming Yang_Ju Peng_Jiongwen
 This is a project designed for composing music with your numbered music notation.  
 Click [Here](#001) to a Chinese Version.   
 
