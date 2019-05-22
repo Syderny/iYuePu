@@ -1,6 +1,6 @@
 # iYuePu
 # CppProjectX
-By :Yin_Rui Su_Yongye Zhang_Chuming Yang_Ju Peng_Jiongwen 
+By :Yin_Rui Su_Yongye Zhang_Chuming Yang_Ju Peng_Jiongwen
 This is a project designed for composing music with your numbered music notation.  
 Click [Here](#001) to a Chinese Version.   
 
@@ -11,11 +11,17 @@ This is a program mainly programmed in C++ and using Qt 5 as UI.
 ### What Can I do on this application?
 You can input your simplified Music notation according to the international standard of music notation.  
 Click "Play" ,and the rest is for us.  
- 
+
 -------
 
+[项目介绍.pptx](iyuepu.pptx)
 
-### 项目名称： [Here]{#001} 
+[项目演示.mp4](demo_video.mp4)
+
+[项目代码.zip](codes.zip)
+
+[Here](#001)
+### 项目名称：
 i悦谱。  
 ### 项目简介：
 
@@ -24,10 +30,10 @@ i悦谱。
 本项目是为了服务手边没有乐器或者不会演奏乐器的人，您需要的只是一段乐谱和一个带有音响的一台计算机，只要输入您想输入的任意乐谱，运行该程序，即可用计算机来演奏这段美妙动听的旋律。乐谱输入含调式、基本音符以及延长、升降音符等等。  
 #### 示例：  
 输入：  
-_A4 _B4 C5¡¤ _B4 C5 E5 B4  -  - 
-_E4 _E4 A4¡¤ _G4 A4 C5 G4  -  - 
-E4 F4¡¤ _E4 _F4 C5¡¤ E4  - 
-_C5 _C5 _C5 B4¡¤ _F4# F4# B4 B4  -  -  
+_A4 _B4 C5· _B4 C5 E5 B4  -  -
+_E4 _E4 A4· _G4 A4 C5 G4  -  -
+E4 F4· _E4 _F4 C5· E4  -
+_C5 _C5 _C5 B4· _F4# F4# B4 B4  -  -  
 
 A0、B0代表的是钢琴键盘上最右边的两个白色琴键，也是La、Ti的最低音，音高于其有：A1、B1、A2、B2···以此类推。F4#等带有#的键为钢琴中的黑键。  
 前置下划线表示这个音是半音，后置点号表示延长半个音，延时线“-”表示这个音的时值，延时线越长，音符播放时间越长。
@@ -45,7 +51,7 @@ A0、B0代表的是钢琴键盘上最右边的两个白色琴键，也是La、Ti
 3、项目界面设计：    
 请查看[项目简介.doc]文件  
 4、乐谱输入部分的分析：输入部分的乐谱通过字符串进行处理，通过对输入乐谱的处理，定向到文件提取指定的单元音频，再按照设定的每分钟拍数进行播放，可以满足部分用户倍速播放的需求。  
-  
+
 人员分工：  
 A（发起者）:  
 协调整体工作，处理并测试音频与源代码，设计美化项目界面。    
